@@ -1,13 +1,14 @@
 <template>
-  <p>
-    <router-link
-      v-for="(route, index) in routes"
-      :key="index"
-      :to="route.path"
-      >{{ route.name }}</router-link
-    >
-  </p>
-  <router-view></router-view>
+  <section class="home">
+    <nav>
+      <template v-for="(route, index) in routes" :key="index">
+        {{ index }}.<router-link :to="route.path">{{ route.name }}</router-link>
+      </template>
+    </nav>
+    <section class="content">
+      <router-view></router-view>
+    </section>
+  </section>
 </template>
 
 <script>
@@ -23,13 +24,23 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped lang=less>
+.home {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  nav {
+    padding: 10px;
+    border-right: 1px solid #e0e0e0;
+
+    a{
+      text-decoration: none;
+    }
+  }
+
+  .content {
+    padding: 20px;
+  }
 }
 </style>
