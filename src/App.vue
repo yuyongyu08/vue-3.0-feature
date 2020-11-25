@@ -2,7 +2,7 @@
   <section class="home">
     <nav>
       <template v-for="(route, index) in routes" :key="index">
-        {{ index }}.<router-link :to="route.path">{{ route.name }}</router-link>
+        <router-link :to="route.path">{{ index }}.{{ route.name }}</router-link>
       </template>
     </nav>
     <section class="content">
@@ -31,6 +31,8 @@ export default {
   height: 100vh;
 
   nav {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     border-right: 1px solid #e0e0e0;
 
