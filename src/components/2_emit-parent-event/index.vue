@@ -2,11 +2,11 @@
   <h2>场景：子组件需要调用父组件的方法，且无需额外附加逻辑时</h2>
   <div :style="{ fontSize: fontSize + 'em' }">
     <EnlargeTextBad
-      :title="'子组件新建一个方法，用于触发父组件传进来的事件'"
+      title="'子组件新建一个方法，用于触发父组件传进来的事件'"
       :enlarge="resetFontSize"
     />
     <EnlargeTextGood
-      :title="'子组件可以直接触发父组件传进来的事件，无需内部定义事件来承接'"
+      title="'子组件可以直接触发父组件传进来的事件，无需内部定义事件来承接'"
       @enlarge="resetFontSize"
     />
   </div>

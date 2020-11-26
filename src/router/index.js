@@ -5,8 +5,8 @@ import ListObject from '../components/3_v-for-object/index.vue';
 
 const routes = [
   { path: '/no-root-element', name: 'no-root-element', component: NoRootElementComponent },
-  { path: '/emit-parent-event', name: 'emit-parent-event', component: EmitParentEvent },
-  { path: '/v-for-object', name: 'v-for-object', component: ListObject },
+  { path: '/emit-parent-event', name: 'emit-parent-event(2.0+)', component: EmitParentEvent },
+  { path: '/v-for-object', name: 'v-for-object(2.0+)', component: ListObject },
 ];
 
 const router = createRouter({
